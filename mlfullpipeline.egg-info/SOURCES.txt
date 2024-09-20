@@ -1,0 +1,5 @@
+setup.py
+mlfullpipeline.egg-info/PKG-INFO
+mlfullpipeline.egg-info/SOURCES.txt
+mlfullpipeline.egg-info/dependency_links.txt
+mlfullpipeline.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+Main_API: "https://randomuser.me/api/"
+Kafka_Topic_Name: "testing"
+StoreApiDataIn: "/Users/yamanmaharjan/Documents/Personal_yaman/MyKafka_pipeline/LoadConsumerData"
