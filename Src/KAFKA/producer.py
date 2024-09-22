@@ -41,7 +41,7 @@ def Send_message_to_cluster(producer,kafka_topic, API_URL):
         pass
 
 
-if __name__ == "__main__":
+def run_producer():
      full_config_file = get_config_Full_file()
      API_URL = full_config_file['Main_API']
      KafKa_Topic = full_config_file['Kafka_Topic_Name']
