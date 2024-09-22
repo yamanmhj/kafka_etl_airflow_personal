@@ -3,11 +3,8 @@ import csv
 import os
 from kafka import KafkaConsumer
 import json
+from Components.get_config_file import get_config_Full_file
 
-def get_config_from_yaml(config_path):
-    with open(config_path, 'r') as file:
-        config_data = yaml.safe_load(file)
-        return config_data
 
 def write_to_csv(data, Consumer_data_store_location):
     if not os.path.exists(Consumer_data_store_location):
@@ -42,11 +39,10 @@ def consumer_data_store(consumer, Consumer_data_store_location):
     except Exception as e:
         print(f"An error occurred: {e}")  # Logging errors
 
-if __name__ == "__main__":
-    config_path = os.path.join(os.getcwd(), 'config', 'config.yaml')
-    config_file = get_config_from_yaml(config_path)
-    Consumer_data_store_location = config_file['StoreApiDataIn']
-    KafKa_Topic = config_file['Kafka_Topic_Name']
+def run_consumer():
+    full_config_file = get_config_Full_file()
+    Consumer_data_store_location = full_config_file['StoreApiDataIn']
+    KafKa_Topic = full_config_file['Kafka_Topic_Name']
 
     consumer = KafkaConsumer(
         KafKa_Topic,

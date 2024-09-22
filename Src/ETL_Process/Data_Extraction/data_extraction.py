@@ -5,7 +5,7 @@ import sys
 
 from Components.get_config_file import get_config_Full_file
 
-class ExtractData:
+class DataExtractorclass:
     def __init__(self):
         pass
 
