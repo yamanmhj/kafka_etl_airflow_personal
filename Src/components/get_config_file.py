@@ -1,15 +1,14 @@
 import yaml
 import os
 
-def get_config_file_from_path(currentdirectory):
-     config_path = os.path.join(currentdirectory, 'config', 'config.yaml')
-     with open(config_path, 'r') as file:
-        config_data = yaml.safe_load(file)
-        return config_data
-     
-def get_csv_data_from_LOadConsumerData():
-    for file in os.listdir(os.getcwd(),):
-            if file.endswith('.csv'):
-                file_path = os.path.join(self.csv_directory, file)
-                df = pd.read_csv(file_path)
-                data_frames.append(df)
+def get_config_Full_file():
+    module_dir = os.path.dirname(__file__)
+    config_path = os.path.join(os.path.join(os.path.dirname(os.path.dirname(module_dir)), 'config', 'config.yaml'))
+    
+    # Load and return the config data
+    with open(config_path, 'r') as file:
+        config_file_data = yaml.safe_load(file)
+
+    print("config_data is", config_file_data)
+
+    return config_file_data

@@ -1,0 +1,34 @@
+- .DS_Store
+- LoadConsumerData
+- Logger.py
+- Logs
+- Src
+  - Components
+    - get_config_file.py
+  - Dags
+  - ETL_Process
+    - Data_Extraction
+      - data_extraction.py
+    - Data_Loading
+      - data_loading.py
+    - Data_Transformation
+      - data_transformation.py
+  - KAFKA
+    - consumer.py
+    - producer.py
+  - __init__.py
+  - __pycache__
+    - exceptionhandling.cpython-312.pyc
+  - exceptionhandling.py
+- config
+  - config.yaml
+- docker-compose.yaml
+- mlfullpipeline.egg-info
+  - PKG-INFO
+  - SOURCES.txt
+  - dependency_links.txt
+  - top_level.txt
+- plugins
+- requirements.txt
+- setup.py
+- utils.py

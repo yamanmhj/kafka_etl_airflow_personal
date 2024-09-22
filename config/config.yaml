@@ -1,3 +1,7 @@
 Main_API: "https://randomuser.me/api/"
 Kafka_Topic_Name: "testing"
 StoreApiDataIn: "/Users/yamanmaharjan/Documents/Personal_yaman/MyKafka_pipeline/LoadConsumerData"
+Aws_Access_key: ""
+Aws_Secret_Key: ""
+AWS_Bucket_Name: ""
+AWS_Region_Name: "us-east-1"

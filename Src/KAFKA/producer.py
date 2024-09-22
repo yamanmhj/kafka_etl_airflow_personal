@@ -5,8 +5,7 @@ import json
 import yaml
 from kafka import KafkaProducer
 import time
-from components.get_config_file import get_config_file_from_path
-
+from Components.get_config_file import get_config_Full_file
 
 
 def fetch_data_from_api(API_URL):
@@ -43,13 +42,12 @@ def Send_message_to_cluster(producer,kafka_topic, API_URL):
 
 
 if __name__ == "__main__":
-    config_path = get_config_file_from_path(os.getcwd())
-    config_file = get_config(config_path)
-    API_URL = config_file['Main_API']
-    KafKa_Topic = config_file['Kafka_Topic_Name']
+     full_config_file = get_config_Full_file()
+     API_URL = full_config_file['Main_API']
+     KafKa_Topic = full_config_file['Kafka_Topic_Name']
     
-    producer = KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-    Send_message_to_cluster(producer, KafKa_Topic, API_URL)
+     producer = KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+     Send_message_to_cluster(producer, KafKa_Topic, API_URL)
 
         
   
