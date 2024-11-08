@@ -73,7 +73,7 @@ trigger_data_extraction = PythonOperator(
 
 
 trigger_data_transformation = PythonOperator(
-    task_id = 'trigger_data_transformation',
+    task_id = 'trigger_data_transformations',
     python_callable = Data_transformation_on_csv,
     provide_context = True,
     dag = dag
