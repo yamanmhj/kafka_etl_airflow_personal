@@ -132,6 +132,6 @@ kafka:
 etl:
   batch_size: 100
   output_path: "./artifacts/"
-```
+
 
 
